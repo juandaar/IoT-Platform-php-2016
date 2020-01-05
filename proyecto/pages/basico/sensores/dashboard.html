@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+
+
+	  
+<html lang="es">
+  <head>
+    <meta charset="utf-8">  <!-- unicode lenguaje español-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Proyecto_Final </title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.5 -->
+    <link rel="stylesheet" href="../../../bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../../../dist/css/AdminLTE.min.css">
+  <!-- estilo-->
+    <link rel="stylesheet" href="../../../dist/css/skins/skin-green-light.min.css">
+    <!-- daterange picker -->
+    <link rel="stylesheet" href="../../../plugins/daterangepicker/daterangepicker-bs3.css">
+
+	   <!-- Select2 -->
+    <link rel="stylesheet" href="../../../plugins/select2/select2.min.css">
+	  
+	  <!--morris-->
+	  <link rel="stylesheet" href="../../../plugins/morris/morris.css">
+	   <!-- DataTables -->
+    <link rel="stylesheet" href="../../../plugins/datatables/dataTables.bootstrap.css">
+	  
+	 
+  </head>
+
+  <body class="hold-transition skin-green-light sidebar-mini">
+	  <a href="../../../" id="conectado"></a>
+    <div class="wrapper">
+
+      <!-- Main Header -->
+      <header class="main-header">
+
+        <!-- Logo -->
+        <a  class="logo">
+     
+          <span class="logo-mini"><b>P</b>F</span>
+          <span class="logo-lg"><b>Proyecto</b>FINAL</span>
+          
+        </a>
+
+        <!-- Header Navbar -->
+        <nav class="navbar navbar-static-top" role="navigation">
+           <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+            <span class="sr-only">Toggle navigation</span>
+           </a>
+          <div class="navbar-custom-menu">
+            <ul class="nav navbar-nav">
+    <li class="dropdown user user-menu">
+                 <!-- Menu Toggle Button -->
+                 <a href="../../#" class="dropdown-toggle" data-toggle="dropdown">
+					<span class="hidden-xs"  > <i class="fa fa-user" id="nombre_usuario"> </i></span>
+                </a>
+                <ul class="dropdown-menu" id="cuenta">
+
+                </ul>
+              </li>
+           </ul>
+          </div>
+        </nav>
+      </header>
+      <!-- Left side column. contains the logo and sidebar -->
+      <aside class="main-sidebar">
+
+        <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar">
+
+          <!-- Sidebar user panel (optional) -->
+          <div class="user-panel">
+            <div class="pull-left image">
+              <img src="../../../dist/img/escudo2.jpg  " alt="User Image">
+            </div>
+            <div class="pull-left info">
+              <p>proyecto Udea <br> GITA</p>
+            </div>
+          </div>
+
+
+            <!-- Sidebar Menu -->
+          <ul class="sidebar-menu" id="opciones">
+		
+
+            
+          </ul><!-- /.sidebar-menu -->
+		
+        </section>
+        <!-- /.sidebar -->
+      </aside>
+   
+		
+      <!-- Content Wrapper. Contains page content -->
+      <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+          <h1>
+           <b>Dashboard</b>.
+
+          </h1>
+
+          <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i>Dashboard</a></li>
+			  <li><a href="#"><i class="fa  fa-fire"></i>Gas </a></li>
+          </ol>
+         </section>
+
+        <!-- Main content -->
+        <section class="content">
+
+          <div class="row">
+
+            <div class="col-sm-6">
+              <div class="box box-success">
+                <div class="box-header bg-green-gradient">
+                  <h3 class="box-title">Configuración</h3>
+                </div>
+                <div class="box-body">
+                  <!-- Rango fecha -->
+                  <div class="form-group">
+                    <label>Rango Fechas:</label>
+                    <div class="input-group">
+                      <div class="input-group-addon">
+                        <i class="fa fa-calendar"></i>
+                      </div>
+						<input type="text" class="form-control pull-right" id="fecha" >
+                    </div><!-- /.input group -->
+                  </div><!-- /.form group -->
+
+                  <!-- Rango Dias -->
+                 <!-- se requiere del plugin select2 -->
+                   <div class="form-group">
+                    <label>Dias</label>
+                    <select  class="form-control select2 " multiple="multiple"  data-placeholder="Todos los dias" style="width: 100%;" id="dias"  >
+                      <option value="2">Lunes</option>
+                      <option value="3">Martes</option>
+                      <option value="4">Miércoles</option>
+                      <option value="5">Jueves</option>
+                      <option value="6">Viernes</option>
+                      <option value="7">Sabado</option>
+                      <option value="1">Domingo</option>
+                    </select>
+                  </div><!-- /.form-group -->
+
+                    <div class="form-group">
+                    <label>Tipo sensor</label>
+                    <select  class="form-control select2"   data-placeholder="Ninguno" style="width: 100%;" id="clase_sensor" onchange="sensores_del_tipo()"  >
+
+                    </select>
+                  </div><!-- /.form-group -->
+					
+					
+					<div class="form-group">
+                    <label>Sensores:</label>
+                    <select  class="form-control select2" multiple="multiple" data-placeholder="Todos los sensores" style="width: 100%;" id="sensores" >
+                    </select>
+					
+                    </div><!-- /.form-group -->
+ 
+					 <div class="form-group">
+                    <label>Análisis</label>
+                    <select  class="form-control select2"  data-placeholder="Ninguno"  style="width: 100%;" id="analisis"   >
+
+                    </select>
+                  </div><!-- /.form-group -->
+					 
+					<div class="filter_update" style="clear: none;" >
+		<input type="submit" class="btn refresh_ccmbr" id="actualizar" value="actualizar"  style="background-color:#00a65a;color: white; "onclick="actualizar()" />
+		<input type="submit" class="pull-right btn refresh_ccmbr" id="datos" value="Descargar"  style="background-color:#00a65a;color: white"; onclick="descargar()" />
+					</div>
+			
+             
+                  </div>
+		      <!--Sensores a Graficar y analizar -->
+					
+					
+                </div><!-- box-->
+       
+                </div><!-- /.box-body -->
+		     <div class="col-md-6">
+		     <!-- consumo -->
+              <div class="box box-success">
+                <div class="box-header ">
+                  <h3 class="box-title">Total</h3>
+                </div>
+                <div class="box-body chart-responsive">
+                  <div class="chart_responsive" id="barras" style="height: 393px;"></div>
+                </div><!-- /.box-body -->
+              </div><!-- /.box -->
+
+            </div>
+			  
+			  
+			</div>
+
+			 <div class="row">
+		      <div class="col-md-15">
+              <!-- consumo de agua -->
+              <div class="box box-success" >
+                <div class="box-header with-border">
+                  <h3 class="box-title">GRAFICA 1</h3>
+                </div>
+                <div class="box-body chart-responsive">
+                  <div class="chart" id="consumo_total" style="height: 400px;"></div>
+                </div><!-- /.box-body -->
+              </div><!-- /.box -->
+
+       
+           <div class="box box-success" >
+                <div class="box-header with-border">
+                  <h3 class="box-title">GRAFICA 2</h3>
+                </div>
+                <div class="box-body chart-responsive">
+                  <div class="chart" id="consumo_separado" style="height: 500px;"></div>
+                </div><!-- /.box-body -->
+              </div><!-- /.box -->
+            
+              <!-- Datos generales -->
+              <div class="box box-success">
+                <div class="box-header with-border">
+                  <h3 class="box-title">Datos</h3>
+          
+                </div>
+                <div class="box-body chart-responsive">
+				<table id="tabla_datos" class="table table-bordered table-hover">
+				    <thead>
+                      <tr>
+                        <th>Sensores</th>
+						<th>Unidades</th>
+                        <th>Total</th>
+                        <th>Máximo</th>
+                        <th>Minimo</th>
+                        <th>Media</th>
+					    <th>Desviación</th> 
+					    <th>Cantidad</th> 
+					    <th>Recopilados</th> 
+					    <th>sin sensar</th> 
+                      </tr>
+                    </thead>
+					</table>
+                </div><!-- /.box-body -->
+              </div><!-- /.box -->
+
+
+			 </div><!-- /.col (LEFT) -->
+			</div> <!--/fin row-->
+        </section>
+      </div><!-- /.content-wrapper -->
+
+      <!-- Main Footer -->
+      <footer class="main-footer">
+        <!-- To the right -->
+        <div class="pull-right hidden-xs">
+         <center> <strong><a href="https://sites.google.com/site/grupotelecoudea/" target="_blank">Grupo de Investigación   en Telecomunicaciones Aplicadas <br> GITA </a></strong> </center>
+        </div>
+        <!-- Default to the left -->
+ <div class="pull-left image">
+              <img src="../../../dist/img/escudo.jpg" alt="Smiley face" height="50" width="43">
+  </div>
+<strong><a  href="http://www.udea.edu.co/wps/portal/udea/web/inicio/!ut/p/z1/04_Sj9CPykssy0xPLMnMz0vMAfIjo8ziLSydjQwdTQx8LAws3AwcA0N8XE1CfQ0M_E31wwkpiAJKG-AAjgZA_VFgJXATDLwNTYEmuAb4hfg7B7h4GUEV4DGjIDfCINNRUREATA0gew!!/dz/d5/L2dBISEvZ0FBIS9nQSEh/"target="_blank">Universidad de Antioquia</a><br>&emsp;Medellin-Antioquia<br></strong>
+
+      </footer>
+
+    
+    </div><!-- ./wrapper -->
+
+<!-- PHP BASE DE DATOS-->
+    <!-- jQuery 2.1.4 -->
+    <script src="../../../plugins/jQuery/jQuery-2.1.4.min.js"></script>
+    <!-- Bootstrap 3.3.5 -->
+    <script src="../../../bootstrap/js/bootstrap.min.js"></script>
+    <!-- Select2 -->
+	<script src="../../../plugins/select2/i18n/es.js"></script>
+    <script src="../../../plugins/select2/select2.full.min.js"></script>
+	  
+    <!-- date-range-picker -->
+     <script src="../../../plugins/daterangepicker/moment.min.js"></script>
+    <script src="../../../plugins/daterangepicker/daterangepicker.js"></script>
+
+    <!-- iCheck 1.0.1 -->
+    <!--<script src="../../../plugins/iCheck/icheck.min.js"></script>
+    <!-- FastClick -->
+    <script src="../../../plugins/fastclick/fastclick.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="../../../dist/js/app.min.js"></script>
+
+
+    <!-- Page script -->
+	  
+	  <!--morris, usado para las graficas con en puglins morris-->
+      <script src="../../../plugins/morris/morris.min.js"></script>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+	 <!-- Graficas amcharts-->
+
+        <script src="../../../plugins/amcharts/amcharts/amcharts.js" type="text/javascript"></script>
+        <script src="../../../plugins/amcharts/amcharts/serial.js" type="text/javascript"></script> 
+	    <script src="../../../plugins/amcharts/amcharts/xy.js" type="text/javascript"></script>
+	    <script src="../../../plugins/json2xls/lib/json2xls.js"></script>
+	     <script src="../../../dist/js/proyecto/basico/sensores/dashboard.js"></script>
+
+
+  </body>
+</html>
