@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+
+<!--general-->
+<html lang="es">
+  <head>
+    <meta charset="utf-8">  <!-- unicode lenguaje español-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Proyecto_Final </title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.5 -->
+    <link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../../dist/css/AdminLTE.min.css">
+  <!-- estilo-->
+    <link rel="stylesheet" href="../../dist/css/skins/skin-green-light.min.css">
+	<link rel="stylesheet" href="../../plugins/morris/morris.css">
+
+  </head>
+
+  <body class="hold-transition skin-green-light sidebar-mini">
+    <div class="wrapper">
+
+      <!-- Main Header -->
+      <header class="main-header">
+
+        <!-- Logo -->
+        <a  class="logo">
+     
+          <span class="logo-mini"><b>P</b>F</span>
+          <span class="logo-lg"><b>Proyecto</b>FINAL</span>
+          
+        </a>
+
+        <!-- Header Navbar -->
+        <nav class="navbar navbar-static-top" role="navigation">
+           <a class="sidebar-toggle" data-toggle="offcanvas" role="button" >
+            <span class="sr-only">Toggle navigation</span>
+           </a>
+          <div class="navbar-custom-menu">
+            <ul class="nav navbar-nav">
+    <li class="dropdown user user-menu">
+                <!-- Menu Toggle Button -->
+  
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+
+                  <span class="hidden-xs"><i class="fa fa-user"></i>Usuario</span>
+                </a>
+                <ul class="dropdown-menu">
+                     <li><a  class="btn btn-default btn-flat" href="../register.html" style="background-color:#00a65a;color: white;"><b>Registro</b></a></li>
+                      <li><a class="btn btn-default btn-flat"  href="../login.html"style="background-color:#00a65a;color: white;"><b>Iniciar sesión</b><br> </a></li>
+                </ul>
+              </li>
+           </ul>
+          </div>
+        </nav>
+      </header>
+      <!-- Left side column. contains the logo and sidebar -->
+      <aside class="main-sidebar">
+
+        <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar">
+
+          <!-- Sidebar user panel (optional) -->
+          <div class="user-panel">
+            <div class="pull-left image">
+              <img src="../../dist/img/escudo2.jpg  " alt="User Image">
+            </div>
+            <div class="pull-left info">
+              <p>proyecto Udea <br> GITA</p>
+            </div>
+          </div>
+
+
+          <!-- Sidebar Menu -->
+          <ul class="sidebar-menu">
+	        <li class="treeview"><a href="../../index.html"><i class="fa fa-book"></i><span>Información</span></a></li>
+			<li class="treeview">
+              <a href="#"><i class=" fa fa-file-pdf-o"></i> <span>ProyectoUdea</span> </a>
+              <ul class="treeview-menu">
+            	     <li class="treview"><a href="#"></a></li>
+                     <li class="treview"><a href="proyecto.html"><i class="fa fa-circle-o"></i>¿Que es?</a></li>
+                     <li class="treview"><a href="proyecto.html"><i class="fa fa-circle-o"></i>Guias</a></li>
+					<li class="treview"> <a href="proyecto.html"><i class="fa fa-circle-o"></i>Agradecimientos</a></li>
+             </ul>
+            </li>
+            <li class="active"><a href="#"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a>
+			
+				<ul class="treeview-menu">
+			    <li class="active"><a href="#"><i class="fa fa-book"></i>General</a></li>
+                <li class="treview"><a href="sensores/dashboard.html"><i class="fa  fa-book "></i>Sensores</a></li>
+                </ul>
+			  
+			  
+			 </li>
+			  
+			  			  
+			 <!-- requiere permisos avanzados dados por el administrador de la pagina -->
+			 <li class="treeview">
+                <a href="#"><i class="fa fa-star-o"></i> <span>Creación</span> </a>
+              <ul class="treeview-menu">
+
+                     <li class="treview"><a href="../avanzado/sensores.html"><i class="fa  fa-flash"></i>Sensores</a></li>
+                     <li class="treview"><a href="../avanzado/dispositivos.html"><i class="fa fa-flash"></i>Dispositivos</a></li>
+				     <li class="treview">
+				      <a href="#"><i class="fa fa-cloud"></i>Analisís de Datos</a>
+				         <ul class="treeview-menu">
+					         <li><a href="informacion_analisis.html"><i class="fa fa-book"></i>Explicación</a></li>
+                             <li><a href="../avanzado/analisis.html"><i class="fa fa-cloud"></i>Ingresar Algoritmo</a></li>
+					
+                         </ul>
+	                 </li>
+              </ul>
+			<!--requiere permisops de administracion-->
+			 <li class="treeview">
+               <a href="#"><i class="fa fa-star-o"></i> <span>Administración</span> </a>
+              <ul class="treeview-menu">
+                    <li class="treview"><a href="../administrador/sensores.html"><i class="fa  fa-flash"></i>Sensores</a></li>
+                    <li class="treview"><a href="../administrador/dispositivos.html"><i class="fa fa-flash"></i>Dispositivos</a></li>
+				    <li class="treview"><a href="../administrador/datos.html"><i class="fa fa-book"></i>Datos</a></li>
+				    <li class="treview"><a href="../administrador/usuarios.html"><i class="fa fa-book"></i>Usuarios</a></li>
+         
+              </ul>				  
+		    
+				  
+		     <!-- finalizado-->
+            
+		
+
+          </ul><!-- /.sidebar-menu -->
+		
+        </section>
+        <!-- /.sidebar -->
+      </aside>
+   
+		
+      <!-- Content Wrapper. Contains page content -->
+      <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+          <h1>
+           <b>Dashboard</b>.
+          </h1>
+
+		
+          <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i>Dashboard</a></li>
+			<li><a href="#">General </a></li>
+          </ol>
+         </section>
+
+        <!-- Main content -->
+        <section class="content">
+			<!-- como dashboard general, se busca solo mostrar el consumo del dia actual vs el dia anterior, ademas de mostrar el consumo general de energia , ademas del consumo del mes el cual se compara con el consumo del mes anterior -->
+			 <div class="row">
+		      <div class="col-md-15">
+              <!-- consumo de agua -->
+              <div class="box box-success" >
+                <div class="box-header with-border">
+                  <h3 class="box-title">Consumo  Agua</h3>
+                </div>
+                <div class="box-body chart-responsive">
+                  <div class="chart" id="agua_line_comparativa_2_dias" style="height: 400px;" ></div>
+                </div><!-- /.box-body -->
+              </div><!-- /.box -->
+
+              <!-- Consumo de energia -->
+              <div class="box box-success">
+                <div class="box-header with-border">
+                  <h3 class="box-title">Consumo  Energia </h3>
+               
+                </div>
+                <div class="box-body chart-responsive">
+                  <div class="chart" id="energia_line_comparativa_2_dias" style="height: 400px;" ></div>
+                </div><!-- /.box-body -->
+              </div><!-- /.box -->
+
+          
+              <!-- Consumo de gas -->
+              <div class="box box-success">
+                <div class="box-header with-border">
+                  <h3 class="box-title">Consumo  Gas </h3>
+          
+                </div>
+                <div class="box-body chart-responsive">
+                  <div class="chart" id="gas_line_comparativa_2_dias" style="height: 400px;"></div>
+                </div><!-- /.box-body -->
+              </div><!-- /.box -->
+
+
+			 </div><!-- /.col (LEFT) -->
+			</div> <!--/fin row-->
+				
+     <div class="row">
+	 <div class="col-md-4">
+		 <!-- consumo agua  -->
+              <div class="box box-success">
+                <div class="box-header with-border">
+                  <h3 class="box-title">Consumo Agua</h3>
+                  
+                </div>
+                <div class="box-body chart-responsive">
+                  <div class="chart" id="circular_agua" ></div>
+                </div><!-- /.box-body -->
+              </div><!-- /.box -->
+     </div> <!--primero-->
+              
+    <div class="col-md-4">	  
+						  
+              <!-- consumo de energia-->
+              <div class="box box-success">
+                <div class="box-header ">
+                  <h3 class="box-title">Consumo Energia</h3>
+                </div>
+                <div class="box-body chart-responsive">
+                  <div class="chart" id="circular_energia"></div>
+                </div><!-- /.box-body -->
+              </div><!-- /.box -->
+
+            </div><!-- /.col (LEFT) -->
+	
+	<div class="col-md-4">
+		     <!-- consumo de gas-->
+              <div class="box box-success">
+                <div class="box-header ">
+                  <h3 class="box-title">Consumo Gas</h3>
+                </div>
+                <div class="box-body chart-responsive">
+                  <div class="chart" id="circular_gas" ></div>
+                </div><!-- /.box-body -->
+              </div><!-- /.box -->
+
+            </div><!-- /.col (LEFT) -->
+		 
+	</div> <!-- row_2 cierre -->
+
+			
+		  </section>
+
+      </div>
+      <!-- Main Footer -->
+      <footer class="main-footer">
+        <!-- To the right -->
+        <div class="pull-right hidden-xs">
+         <center> <strong><a href="https://sites.google.com/site/grupotelecoudea/" target="_blank">Grupo de Investigación   en Telecomunicaciones Aplicadas <br> GITA </a></strong> </center>
+        </div>
+        <!-- Default to the left -->
+ <div class="pull-left image">
+              <img src="../../dist/img/escudo.jpg" alt="Smiley face" height="50" width="43">
+  </div>
+<strong><a  href="http://www.udea.edu.co/wps/portal/udea/web/inicio/!ut/p/z1/04_Sj9CPykssy0xPLMnMz0vMAfIjo8ziLSydjQwdTQx8LAws3AwcA0N8XE1CfQ0M_E31wwkpiAJKG-AAjgZA_VFgJXATDLwNTYEmuAb4hfg7B7h4GUEV4DGjIDfCINNRUREATA0gew!!/dz/d5/L2dBISEvZ0FBIS9nQSEh/"target="_blank">Universidad de Antioquia</a><br>&emsp;Medellin-Antioquia<br></strong>
+
+      </footer>
+
+    </div><!-- ./wrapper -->
+	     <!-- jQuery 2.1.4 -->
+    <script src="../../plugins/jQuery/jQuery-2.1.4.min.js"></script>
+    <!-- Bootstrap 3.3.5 -->
+    <script src="../../bootstrap/js/bootstrap.min.js"></script>
+    <!-- Morris.js charts -->
+	  <script src="../../plugins/morris/raphael.min.js"></script>
+    <script src="../../plugins/morris/morris.min.js"></script>
+    <!-- FastClick -->
+    <script src="../../plugins/fastclick/fastclick.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="../../dist/js/app.min.js"></script>
+    	
+   <!-- page script -->
+	  <!-- Graficas amcharts-->
+        <script src="../../plugins/amcharts/amcharts/amcharts.js" type="text/javascript"></script>
+        <script src="../../plugins/amcharts/amcharts/serial.js" type="text/javascript"></script> 
+	  
+	 
+ <script type="text/javascript">
+
+ function grafica(consumo,resultado,colorA,colorH)
+ {
+  var ayer=consumo+"1";
+  var hoy=consumo+"2";
+  var id_grafica=consumo+"_line_comparativa_2_dias";
+                chart = new AmCharts.AmSerialChart();
+
+                chart.dataProvider = resultado;
+                chart.categoryField = "hora";
+                var categoryAxis = chart.categoryAxis;
+                categoryAxis.parseDates = false;
+          
+                categoryAxis.axisColor = "white";
+        
+               // first value axis (on the left)
+               var valueAxis1 = new AmCharts.ValueAxis();
+               valueAxis1.axisColor = colorA;
+               valueAxis1.axisThickness = 2;
+               chart.addValueAxis(valueAxis1);
+
+               // second value axis (on the right)
+               var valueAxis2 = new AmCharts.ValueAxis();
+               valueAxis2.position = "right"; // this line makes the axis to appear on the right
+               valueAxis2.axisColor = colorH;
+               valueAxis2.gridAlpha = 0;
+               valueAxis2.axisThickness = 2;
+               chart.addValueAxis(valueAxis2);
+
+               // GRAPHS
+               // first graph
+               var graph1 = new AmCharts.AmGraph();
+               graph1.valueAxis = valueAxis1; // we have to indicate which value axis should be used
+               graph1.lineColor = colorA;
+               graph1.title = "Ayer";
+               graph1.valueField =ayer;
+        
+               chart.addGraph(graph1);
+
+               // second graph
+               var graph2 = new AmCharts.AmGraph();
+               graph2.valueAxis = valueAxis2; // we have to indicate which value axis should be used
+               graph2.lineColor = colorH;
+               graph2.title = "Hoy";
+               graph2.valueField =hoy;
+               chart.addGraph(graph2);
+
+              chartCursor = new AmCharts.ChartCursor();
+              chartCursor.cursorPosition = "mouse";
+              chartCursor.categoryBalloonDateFormat = "JJ:NN, DD MMMM";
+              chartCursor.color="white";
+              chartCursor.cursorColor="#45B549";
+                chart.addChartCursor(chartCursor);
+
+              
+       
+               var legend = new AmCharts.AmLegend();
+               legend.marginLeft = 110;
+               legend.useGraphSettings = true;
+               chart.addLegend(legend);
+               // WRITE
+               chart.write(id_grafica);
+ }
+
+
+  function graficas_y_datos()
+  {
+
+ var d = new Date();
+ //var fecha1=(d.getFullYear()+"-"+("0"+(d.getMonth())).slice(-2)+"-"+("0" + (d.getDate()-22)).slice(-2));
+ //var fecha2=(d.getFullYear()+"-"+("0"+(d.getMonth())).slice(-2)+"-"+("0" + (d.getDate()-21)).slice(-2));
+var fecha2="2016-07-19";
+var fecha1="2016-07-20";
+var colorH=["#0101DF","#0B610B","#B40404"];
+var colorA=["#CEF6EC","#9FF781","#F5BCA9"];
+var grafica_1=$.post('../../php/dashboard/graficas_morris_line.php',{ Fecha1:fecha1,Fecha2:fecha2},
+function (data)
+{
+var contador=0;
+var resultado=eval(data);
+var chart;
+var chartCursor;
+
+grafica("agua",resultado,colorA[0],colorH[0]);
+grafica("energia",resultado,colorA[1],colorH[1]);
+grafica("gas",resultado,colorA[2],colorH[2]);
+
+});
+var grafica_2=$.post('../../php/dashboard/graficas_morris_donut.php',{ Fecha1:fecha1,Fecha2:fecha2},
+function (data)
+{
+var resultado=eval(data);
+
+          //consumo de agua
+        var donut_agua = new Morris.Donut({
+          element: 'circular_agua',
+          resize: true,
+			  parseTime: false,
+          colors: ["#CEF6EC","#0101DF"],
+          data: [
+            {label: 'Ayer', value: resultado[0]['agua']},
+            {label: 'Hoy', value: resultado[1]['agua']},
+          ], 
+		  formatter:function (y, data) { return y+ ' m3' } ,
+          hideHover: 'auto'
+        });
+		         //consumo de energia
+        var donut_energia = new Morris.Donut({
+          element: 'circular_energia',
+          resize: true,
+		 parseTime: false,
+          colors: ["#9FF781","#0B610B"],
+          data: [
+            {label: 'Ayer', value: resultado[0]['energia']},
+            {label: 'Hoy', value: resultado[1]['energia']},
+          ],
+          formatter:function (y, data) { return y+ ' KW' } ,
+          hideHover: 'auto'
+        });
+		         //consumo de agua
+        var donut_agua = new Morris.Donut({
+          element: 'circular_gas',
+          resize: true,
+			  parseTime: false,
+          colors: ["#F5BCA9","#B40404"],
+          data: [
+            {label: 'Ayer', value: resultado[0]['gas']},
+            {label: 'Hoy', value: resultado[1]['gas']},
+          ],
+          formatter:function (y, data) { return y+ ' KW' } ,								
+          hideHover: 'auto'	
+        });
+	
+});
+};
+
+  $(function () { graficas_y_datos();  });
+    </script>
+	
+  </body>
+</html>
